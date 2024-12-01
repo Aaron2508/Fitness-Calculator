@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fitness Calculator</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header>
+            <h1>Fitness Calculator</h1>
+            <p>Your personalized guide to achieving your fitness goals.</p>
+        </header>
+
+        <!-- Main Form -->
+        <main>
+            <form id="fitnessForm">
+                <!-- Step 1: Personal Information -->
+                <div class="form-step active" id="step1">
+                    <h2>Step 1: Personal Information</h2>
+                    <label>What is your gender?</label>
+                    <div class="option-group">
+                        <input type="radio" id="gender-male" name="gender" value="male" required>
+                        <label for="gender-male">Man</label>
+
+                        <input type="radio" id="gender-female" name="gender" value="female" required>
+                        <label for="gender-female">Woman</label>
+                    </div>
+
+                    <label for="age">Age:</label>
+                    <input type="number" id="age" placeholder="Enter your age" required>
+
+                    <label for="height">Height (cm):</label>
+                    <input type="number" id="height" placeholder="Enter your height" required>
+
+                    <label for="weight">Weight (kg):</label>
+                    <input type="number" id="weight" placeholder="Enter your weight" required>
+                </div>
+
+                <!-- Step 2: Food Preferences -->
+                <div class="form-step" id="step2">
+                    <h2>Step 2: Food Preferences</h2>
+                    <label>Do you have any dietary restrictions?</label>
+                    <div class="option-group">
+                        <input type="radio" id="diet-none" name="diet" value="none" required>
+                        <label for="diet-none">None</label>
+
+                        <input type="radio" id="diet-vegetarian" name="diet" value="vegetarian" required>
+                        <label for="diet-vegetarian">Vegetarian</label>
+
+                        <input type="radio" id="diet-vegan" name="diet" value="vegan" required>
+                        <label for="diet-vegan">Vegan</label>
+                    </div>
+
+                    <label for="favoriteFoods">What are your favorite foods?</label>
+                    <input type="text" id="favoriteFoods" placeholder="Enter your favorite foods">
+
+                    <label>Do you prefer home-cooked meals or takeout?</label>
+                    <div class="option-group">
+                        <input type="radio" id="meal-home" name="mealType" value="homeCooked" required>
+                        <label for="meal-home">Home-cooked</label>
+
+                        <input type="radio" id="meal-takeout" name="mealType" value="takeout" required>
+                        <label for="meal-takeout">Takeout</label>
+                    </div>
+                </div>
+
+                <!-- Step 3: Fitness Goals -->
+                <div class="form-step" id="step3">
+                    <h2>Step 3: Fitness Goals</h2>
+                    <label>What is your main fitness goal?</label>
+                    <div class="option-group">
+                        <input type="radio" id="goal-weightLoss" name="fitnessGoal" value="weightLoss" required>
+                        <label for="goal-weightLoss">Weight Loss</label>
+
+                        <input type="radio" id="goal-muscleGain" name="fitnessGoal" value="muscleGain" required>
+                        <label for="goal-muscleGain">Muscle Gain</label>
+
+                        <input type="radio" id="goal-maintenance" name="fitnessGoal" value="maintenance" required>
+                        <label for="goal-maintenance">Maintenance</label>
+                    </div>
+
+                    <label>How soon do you want to achieve your goal?</label>
+                    <div class="option-group">
+                        <input type="radio" id="goal-3Months" name="goalTime" value="3Months" required>
+                        <label for="goal-3Months">Within 3 months</label>
+
+                        <input type="radio" id="goal-6Months" name="goalTime" value="6Months" required>
+                        <label for="goal-6Months">Within 6 months</label>
+
+                        <input type="radio" id="goal-1Year" name="goalTime" value="1Year" required>
+                        <label for="goal-1Year">Within 1 year</label>
+                    </div>
+                </div>
+
+                <!-- Step 4: Training Preferences -->
+                <div class="form-step" id="step4">
+                    <h2>Step 4: Training Preferences</h2>
+                    <label>Where do you prefer to work out?</label>
+                    <div class="option-group">
+                        <input type="radio" id="workout-gym" name="workoutLocation" value="gym" required>
+                        <label for="workout-gym">Gym</label>
+
+                        <input type="radio" id="workout-home" name="workoutLocation" value="home" required>
+                        <label for="workout-home">Home</label>
+
+                        <input type="radio" id="workout-outdoor" name="workoutLocation" value="outdoor" required>
+                        <label for="workout-outdoor">Outdoor</label>
+                    </div>
+
+                    <label>How many days a week can you work out?</label>
+                    <div class="option-group">
+                        <input type="radio" id="workout-1-2" name="workoutDays" value="1-2" required>
+                        <label for="workout-1-2">1-2 days</label>
+
+                        <input type="radio" id="workout-3-4" name="workoutDays" value="3-4" required>
+                        <label for="workout-3-4">3-4 days</label>
+
+                        <input type="radio" id="workout-5-6" name="workoutDays" value="5-6" required>
+                        <label for="workout-5-6">5-6 days</label>
+                    </div>
+                </div>
+
+                <!-- Step 5: Wellbeing -->
+                <div class="form-step" id="step5">
+                    <h2>Step 5: Wellbeing</h2>
+                    <label>How many hours of sleep do you get on average?</label>
+                    <div class="option-group">
+                        <input type="radio" id="sleep-4-5" name="sleepHours" value="4-5" required>
+                        <label for="sleep-4-5">4-5 hours</label>
+
+                        <input type="radio" id="sleep-6-7" name="sleepHours" value="6-7" required>
+                        <label for="sleep-6-7">6-7 hours</label>
+
+                        <input type="radio" id="sleep-8" name="sleepHours" value="8+" required>
+                        <label for="sleep-8">8+ hours</label>
+                    </div>
+
+                    <label>How would you rate your stress level?</label>
+                    <div class="option-group">
+                        <input type="radio" id="stress-low" name="stressLevel" value="low" required>
+                        <label for="stress-low">Low</label>
+
+                        <input type="radio" id="stress-medium" name="stressLevel" value="medium" required>
+                        <label for="stress-medium">Medium</label>
+
+                        <input type="radio" id="stress-high" name="stressLevel" value="high" required>
+                        <label for="stress-high">High</label>
+                    </div>
+                </div>
+
+                <!-- Navigation Buttons -->
+                <div class="buttons">
+                    <button type="button" id="prevButton" class="button">Back</button>
+                    <button type="button" id="nextButton" class="button">Next</button>
+                    <button type="submit" id="submitButton" class="button">Calculate</button>
+                </div>
+            </form>
+
+            <!-- Hidden Fitness Plan Section -->
+            <div id="fitnessPlan" class="fitness-plan" style="display: none;">
+                <h2>Your Fitness Plan</h2>
+                <p>Your results will appear here based on your answers.</p>
+                <button onclick="location.reload()" class="button restart-button">Restart</button>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2024 Made by Aaron | Your fitness journey starts here.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
