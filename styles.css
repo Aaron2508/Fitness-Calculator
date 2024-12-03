@@ -117,6 +117,24 @@ textarea {
     border-color: #007aff;
 }
 
+/* Progress Bar Styling */
+.progress-bar {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    height: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progress {
+    background: #007aff;
+    height: 100%;
+    width: 0%; /* Start at 0% */
+    transition: width 0.3s ease;
+}
+
 /* Button styling */
 .buttons {
     display: flex;
