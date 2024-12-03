@@ -122,7 +122,7 @@ textarea {
     width: 100%;
     background: #e0e0e0;
     border-radius: 5px;
-    margin-bottom: 20px; /* Add space above the progress bar */
+    margin-top: 20px; /* Add space above the progress bar */
     height: 10px;
     overflow: hidden;
     position: relative;
