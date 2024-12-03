@@ -5,9 +5,10 @@ document.addEventListener("DOMContentLoaded", () => {
     const submitButton = document.getElementById("submitButton");
     const fitnessPlan = document.getElementById("fitnessPlan");
     const form = document.getElementById("fitnessForm");
+    const progress = document.getElementById("progress"); // Progress bar element
     let currentStep = 0;
 
-    // Update the visibility of steps
+    // Update the visibility of steps and progress bar
     const updateStep = () => {
         steps.forEach((step, index) => {
             step.classList.toggle("active", index === currentStep);
@@ -17,6 +18,10 @@ document.addEventListener("DOMContentLoaded", () => {
         prevButton.style.display = currentStep > 0 ? "inline-block" : "none";
         nextButton.style.display = currentStep < steps.length - 1 ? "inline-block" : "none";
         submitButton.style.display = currentStep === steps.length - 1 ? "inline-block" : "none";
+
+        // Update progress bar width
+        const progressPercentage = ((currentStep + 1) / steps.length) * 100;
+        progress.style.width = `${progressPercentage}%`;
     };
 
     // Next button click
