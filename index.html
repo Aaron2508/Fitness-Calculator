@@ -17,111 +17,276 @@
         <!-- Main Form -->
         <main>
             <form id="fitnessForm">
+                <!-- Progress Bar -->
+    <div class="progress-bar">
+        <div class="progress" id="progress" style="width: 20%;"></div>
+    </div>
                 <!-- Step 1: Personal Information -->
                 <div class="form-step active" id="step1">
-                    <h2>Step 1: Personal Information</h2>
-                    <label>What is your gender?</label>
-                    <div class="option-group">
-                        <input type="radio" id="gender-male" name="gender" value="male" required>
-                        <label for="gender-male">Man</label>
+    <h2>Step 1: Personal Information</h2>
 
-                        <input type="radio" id="gender-female" name="gender" value="female" required>
-                        <label for="gender-female">Woman</label>
-                    </div>
+    <label>What is your gender?</label>
+    <div class="option-group">
+        <input type="radio" id="gender-male" name="gender" value="male" required>
+        <label for="gender-male">Man</label>
 
-                    <label for="age">Age:</label>
-                    <input type="number" id="age" placeholder="Enter your age" required>
+        <input type="radio" id="gender-female" name="gender" value="female" required>
+        <label for="gender-female">Woman</label>
+    </div>
 
-                    <label for="height">Height (cm):</label>
-                    <input type="number" id="height" placeholder="Enter your height" required>
+    <label for="age">Age:</label>
+    <input type="number" id="age" name="age" placeholder="Enter your age" required>
 
-                    <label for="weight">Weight (kg):</label>
-                    <input type="number" id="weight" placeholder="Enter your weight" required>
-                </div>
+    <label for="height">Height (cm):</label>
+    <input type="number" id="height" name="height" placeholder="Enter your height" required>
 
+    <label for="weight">Weight (kg):</label>
+    <input type="number" id="weight" name="weight" placeholder="Enter your weight" required>
+
+    <label>What is your current fitness level?</label>
+    <div class="option-group">
+        <input type="radio" id="fitness-beginner" name="fitnessLevel" value="beginner" required>
+        <label for="fitness-beginner">Beginner (little to no experience with fitness)</label>
+
+        <input type="radio" id="fitness-intermediate" name="fitnessLevel" value="intermediate" required>
+        <label for="fitness-intermediate">Intermediate (some experience, but not consistent)</label>
+
+        <input type="radio" id="fitness-advanced" name="fitnessLevel" value="advanced" required>
+        <label for="fitness-advanced">Advanced (regular training, consistent routines)</label>
+    </div>
+</div>
                 <!-- Step 2: Food Preferences -->
-                <div class="form-step" id="step2">
-                    <h2>Step 2: Food Preferences</h2>
-                    <label>Do you have any dietary restrictions?</label>
-                    <div class="option-group">
-                        <input type="radio" id="diet-none" name="diet" value="none" required>
-                        <label for="diet-none">None</label>
+              <div class="form-step" id="step2">
+    <h2>Step 2: Food Preferences</h2>
 
-                        <input type="radio" id="diet-vegetarian" name="diet" value="vegetarian" required>
-                        <label for="diet-vegetarian">Vegetarian</label>
+    <label>Do you have any dietary restrictions?</label>
+    <div class="option-group">
+        <input type="radio" id="diet-none" name="dietaryRestrictions" value="none" required>
+        <label for="diet-none">None</label>
 
-                        <input type="radio" id="diet-vegan" name="diet" value="vegan" required>
-                        <label for="diet-vegan">Vegan</label>
-                    </div>
+        <input type="radio" id="diet-vegetarian" name="dietaryRestrictions" value="vegetarian" required>
+        <label for="diet-vegetarian">Vegetarian</label>
 
-                    <label for="favoriteFoods">What are your favorite foods?</label>
-                    <input type="text" id="favoriteFoods" placeholder="Enter your favorite foods">
+        <input type="radio" id="diet-vegan" name="dietaryRestrictions" value="vegan" required>
+        <label for="diet-vegan">Vegan</label>
+    </div>
 
-                    <label>Do you prefer home-cooked meals or takeout?</label>
-                    <div class="option-group">
-                        <input type="radio" id="meal-home" name="mealType" value="homeCooked" required>
-                        <label for="meal-home">Home-cooked</label>
+    <label>How often do you cook at home versus eating out?</label>
+    <div class="option-group">
+        <input type="radio" id="cook-mostly" name="cookFrequency" value="mostlyCook" required>
+        <label for="cook-mostly">I mostly cook at home.</label>
 
-                        <input type="radio" id="meal-takeout" name="mealType" value="takeout" required>
-                        <label for="meal-takeout">Takeout</label>
-                    </div>
-                </div>
+        <input type="radio" id="cook-sometimes" name="cookFrequency" value="sometimesCook" required>
+        <label for="cook-sometimes">I cook at home occasionally.</label>
 
+        <input type="radio" id="cook-eatout" name="cookFrequency" value="mostlyEatOut" required>
+        <label for="cook-eatout">I mostly eat out or order takeout.</label>
+    </div>
+
+    <label>How many meals do you eat per day on average?</label>
+    <div class="option-group">
+        <input type="radio" id="meals-1-2" name="mealFrequency" value="1-2" required>
+        <label for="meals-1-2">1-2</label>
+
+        <input type="radio" id="meals-3" name="mealFrequency" value="3" required>
+        <label for="meals-3">3</label>
+
+        <input type="radio" id="meals-4" name="mealFrequency" value="4+" required>
+        <label for="meals-4">4 or more</label>
+    </div>
+
+    <label>Do you snack often between meals?</label>
+    <div class="option-group">
+        <input type="radio" id="snack-frequent" name="snackFrequency" value="frequent" required>
+        <label for="snack-frequent">Yes, I snack frequently.</label>
+
+        <input type="radio" id="snack-sometimes" name="snackFrequency" value="sometimes" required>
+        <label for="snack-sometimes">Sometimes, but not every day.</label>
+
+        <input type="radio" id="snack-rarely" name="snackFrequency" value="rarely" required>
+        <label for="snack-rarely">Rarely or never.</label>
+    </div>
+
+    <label>How aware are you of your daily calorie intake?</label>
+    <div class="option-group">
+        <input type="radio" id="calorie-aware" name="calorieAwareness" value="aware" required>
+        <label for="calorie-aware">I track my calories every day.</label>
+
+        <input type="radio" id="calorie-sometimes" name="calorieAwareness" value="sometimes" required>
+        <label for="calorie-sometimes">I sometimes check my calorie intake.</label>
+
+        <input type="radio" id="calorie-not" name="calorieAwareness" value="notAware" required>
+        <label for="calorie-not">I don’t track my calories.</label>
+    </div>
+
+    <label>Do you consume alcohol or sugary drinks frequently?</label>
+    <div class="option-group">
+        <input type="radio" id="drinks-frequent" name="drinkFrequency" value="frequent" required>
+        <label for="drinks-frequent">Yes, several times a week.</label>
+
+        <input type="radio" id="drinks-occasional" name="drinkFrequency" value="occasional" required>
+        <label for="drinks-occasional">Occasionally, once or twice a week.</label>
+
+        <input type="radio" id="drinks-rare" name="drinkFrequency" value="rare" required>
+        <label for="drinks-rare">Rarely or never.</label>
+    </div>
+</div>
                 <!-- Step 3: Fitness Goals -->
-                <div class="form-step" id="step3">
-                    <h2>Step 3: Fitness Goals</h2>
-                    <label>What is your main fitness goal?</label>
-                    <div class="option-group">
-                        <input type="radio" id="goal-weightLoss" name="fitnessGoal" value="weightLoss" required>
-                        <label for="goal-weightLoss">Weight Loss</label>
+              <div class="form-step" id="step3">
+    <h2>Step 3: Fitness Goals</h2>
 
-                        <input type="radio" id="goal-muscleGain" name="fitnessGoal" value="muscleGain" required>
-                        <label for="goal-muscleGain">Muscle Gain</label>
+    <label>What is your main fitness goal?</label>
+    <div class="option-group">
+        <input type="radio" id="goal-weightLoss" name="fitnessGoal" value="weightLoss" required>
+        <label for="goal-weightLoss">Lose weight</label>
 
-                        <input type="radio" id="goal-maintenance" name="fitnessGoal" value="maintenance" required>
-                        <label for="goal-maintenance">Maintenance</label>
-                    </div>
+        <input type="radio" id="goal-muscleGain" name="fitnessGoal" value="muscleGain" required>
+        <label for="goal-muscleGain">Gain muscle mass</label>
 
-                    <label>How soon do you want to achieve your goal?</label>
-                    <div class="option-group">
-                        <input type="radio" id="goal-3Months" name="goalTime" value="3Months" required>
-                        <label for="goal-3Months">Within 3 months</label>
+        <input type="radio" id="goal-cardio" name="fitnessGoal" value="cardio" required>
+        <label for="goal-cardio">Improve cardiovascular fitness (e.g., stamina or endurance)</label>
 
-                        <input type="radio" id="goal-6Months" name="goalTime" value="6Months" required>
-                        <label for="goal-6Months">Within 6 months</label>
+        <input type="radio" id="goal-flexibility" name="fitnessGoal" value="flexibility" required>
+        <label for="goal-flexibility">Increase flexibility and mobility</label>
 
-                        <input type="radio" id="goal-1Year" name="goalTime" value="1Year" required>
-                        <label for="goal-1Year">Within 1 year</label>
-                    </div>
-                </div>
+        <input type="radio" id="goal-maintain" name="fitnessGoal" value="maintain" required>
+        <label for="goal-maintain">Maintain current fitness level and stay healthy</label>
+    </div>
+
+    <label>How soon do you want to achieve your goal?</label>
+    <div class="option-group">
+        <input type="radio" id="goal-3Months" name="goalTimeline" value="3Months" required>
+        <label for="goal-3Months">Within 3 months</label>
+
+        <input type="radio" id="goal-6Months" name="goalTimeline" value="6Months" required>
+        <label for="goal-6Months">Within 6 months</label>
+
+        <input type="radio" id="goal-1Year" name="goalTimeline" value="1Year" required>
+        <label for="goal-1Year">Within 1 year</label>
+
+        <input type="radio" id="goal-noMatter" name="goalTimeline" value="noMatter" required>
+        <label for="goal-noMatter">Doesn’t really matter</label>
+    </div>
+
+    <label>Do you have any specific body areas you want to focus on? (Optional)</label>
+    <div class="option-group">
+        <input type="checkbox" id="focus-upperBody" name="focusArea" value="upperBody">
+        <label for="focus-upperBody">Upper body (arms, chest, shoulders)</label>
+
+        <input type="checkbox" id="focus-core" name="focusArea" value="core">
+        <label for="focus-core">Core (abs, lower back)</label>
+
+        <input type="checkbox" id="focus-lowerBody" name="focusArea" value="lowerBody">
+        <label for="focus-lowerBody">Lower body (legs, glutes)</label>
+
+        <input type="checkbox" id="focus-fullBody" name="focusArea" value="fullBody">
+        <label for="focus-fullBody">Full body (overall balance)</label>
+    </div>
+
+    <label>What obstacles have held you back from reaching your fitness goals in the past?</label>
+    <div class="option-group">
+        <input type="checkbox" id="obstacle-time" name="obstacles" value="time">
+        <label for="obstacle-time">Lack of time</label>
+
+        <input type="checkbox" id="obstacle-knowledge" name="obstacles" value="knowledge">
+        <label for="obstacle-knowledge">Lack of knowledge or guidance</label>
+
+        <input type="checkbox" id="obstacle-injury" name="obstacles" value="injury">
+        <label for="obstacle-injury">Injuries or physical limitations</label>
+
+        <input type="checkbox" id="obstacle-habits" name="obstacles" value="habits">
+        <label for="obstacle-habits">Poor habits (e.g., inconsistent exercise, unhealthy eating)</label>
+
+        <input type="checkbox" id="obstacle-support" name="obstacles" value="support">
+        <label for="obstacle-support">Lack of accountability or support</label>
+    </div>
+
+    <label>What is your body composition goal?</label>
+    <div class="option-group">
+        <input type="radio" id="composition-lean" name="bodyComposition" value="lean" required>
+        <label for="composition-lean">Lean and toned</label>
+
+        <input type="radio" id="composition-bulk" name="bodyComposition" value="bulk" required>
+        <label for="composition-bulk">Bulk and muscular</label>
+
+        <input type="radio" id="composition-maintain" name="bodyComposition" value="maintain" required>
+        <label for="composition-maintain">Stay the same</label>
+    </div>
+
+    <label>Do you have a specific fitness goal for a future event?</label>
+    <div class="option-group">
+        <input type="radio" id="event-yes" name="fitnessEvent" value="yes" required>
+        <label for="event-yes">Yes (e.g., marathon, competition)</label>
+
+        <input type="radio" id="event-no" name="fitnessEvent" value="no" required>
+        <label for="event-no">No, just general fitness improvement</label>
+    </div>
+</div>
 
                 <!-- Step 4: Training Preferences -->
-                <div class="form-step" id="step4">
-                    <h2>Step 4: Training Preferences</h2>
-                    <label>Where do you prefer to work out?</label>
-                    <div class="option-group">
-                        <input type="radio" id="workout-gym" name="workoutLocation" value="gym" required>
-                        <label for="workout-gym">Gym</label>
+               <div class="form-step" id="step4">
+    <h2>Step 4: Training Preferences</h2>
 
-                        <input type="radio" id="workout-home" name="workoutLocation" value="home" required>
-                        <label for="workout-home">Home</label>
+    <label>How do you prefer to train?</label>
+    <div class="option-group">
+        <input type="radio" id="train-gym" name="trainingPreference" value="gym" required>
+        <label for="train-gym">At the gym</label>
 
-                        <input type="radio" id="workout-outdoor" name="workoutLocation" value="outdoor" required>
-                        <label for="workout-outdoor">Outdoor</label>
-                    </div>
+        <input type="radio" id="train-equipment" name="trainingPreference" value="equipment" required>
+        <label for="train-equipment">At home with equipment</label>
 
-                    <label>How many days a week can you work out?</label>
-                    <div class="option-group">
-                        <input type="radio" id="workout-1-2" name="workoutDays" value="1-2" required>
-                        <label for="workout-1-2">1-2 days</label>
+        <input type="radio" id="train-bodyweight" name="trainingPreference" value="bodyweight" required>
+        <label for="train-bodyweight">At home with no equipment (bodyweight exercises)</label>
 
-                        <input type="radio" id="workout-3-4" name="workoutDays" value="3-4" required>
-                        <label for="workout-3-4">3-4 days</label>
+        <input type="radio" id="train-outdoors" name="trainingPreference" value="outdoors" required>
+        <label for="train-outdoors">Outdoors (e.g., running, hiking)</label>
 
-                        <input type="radio" id="workout-5-6" name="workoutDays" value="5-6" required>
-                        <label for="workout-5-6">5-6 days</label>
-                    </div>
-                </div>
+        <input type="radio" id="train-sports" name="trainingPreference" value="sports" required>
+        <label for="train-sports">Sports and team-based activities</label>
+    </div>
+
+    <label>How many days a week can you work out?</label>
+    <div class="option-group">
+        <input type="radio" id="days-1-2" name="workoutDays" value="1-2" required>
+        <label for="days-1-2">1-2 days</label>
+
+        <input type="radio" id="days-3-4" name="workoutDays" value="3-4" required>
+        <label for="days-3-4">3-4 days</label>
+
+        <input type="radio" id="days-5-6" name="workoutDays" value="5-6" required>
+        <label for="days-5-6">5-6 days</label>
+
+        <input type="radio" id="days-everyday" name="workoutDays" value="everyday" required>
+        <label for="days-everyday">Every day</label>
+    </div>
+
+    <label>What is your preferred workout duration per session?</label>
+    <div class="option-group">
+        <input type="radio" id="duration-less30" name="workoutDuration" value="less30" required>
+        <label for="duration-less30">Less than 30 minutes</label>
+
+        <input type="radio" id="duration-30-45" name="workoutDuration" value="30-45" required>
+        <label for="duration-30-45">30-45 minutes</label>
+
+        <input type="radio" id="duration-1hour" name="workoutDuration" value="1hour" required>
+        <label for="duration-1hour">1 hour</label>
+
+        <input type="radio" id="duration-more1hour" name="workoutDuration" value="more1hour" required>
+        <label for="duration-more1hour">More than 1 hour</label>
+    </div>
+
+    <label>What kind of training intensity do you prefer?</label>
+    <div class="option-group">
+        <input type="radio" id="intensity-low" name="trainingIntensity" value="low" required>
+        <label for="intensity-low">Low-intensity (relaxed sessions)</label>
+
+        <input type="radio" id="intensity-moderate" name="trainingIntensity" value="moderate" required>
+        <label for="intensity-moderate">Moderate-intensity (challenging but comfortable)</label>
+
+        <input type="radio" id="intensity-high" name="trainingIntensity" value="high" required>
+        <label for="intensity-high">High-intensity (intense and focused)</label>
+    </div>
+</div>
 
                 <!-- Step 5: Wellbeing -->
                 <div class="form-step" id="step5">
