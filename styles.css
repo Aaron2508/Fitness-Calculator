@@ -117,17 +117,6 @@ textarea {
     border-color: #007aff;
 }
 
-/* Progress Bar Styling */
-.progress-bar {
-    width: 100%;
-    background: #e0e0e0;
-    border-radius: 5px;
-    margin-top: 20px; /* Add space above the progress bar */
-    height: 10px;
-    overflow: hidden;
-    position: relative;
-}
-
 .progress {
     background: #007aff;
     height: 100%;
@@ -141,6 +130,7 @@ textarea {
     justify-content: space-between;
     margin-top: 20px;
     gap: 10px;
+    margin-bottom: 20px; /* Ensure space below buttons */
 }
 
 .button {
@@ -164,6 +154,17 @@ textarea {
 button:disabled {
     background: #ccc;
     cursor: not-allowed;
+}
+
+/* Progress Bar Styling */
+.progress-bar {
+    width: 100%;
+    background: #e0e0e0;
+    border-radius: 5px;
+    margin-top: 20px; /* Add space above the progress bar */
+    height: 10px;
+    overflow: hidden;
+    position: relative;
 }
 
 /* Herstart knop */
