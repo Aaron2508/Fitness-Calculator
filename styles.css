@@ -67,22 +67,36 @@ label:not([for]) {
 
 /* Inline input styling */
 .inline-input {
-    display: flex; /* Enable horizontal layout */
-    justify-content: flex-end; /* Align input to the right */
-    margin-bottom: 20px; /* Add spacing below the row */
+    display: flex; /* Align label and input horizontally */
+    justify-content: space-between; /* Space between label and input */
+    align-items: center; /* Center input vertically */
+    margin-bottom: 15px; /* Add space below each row */
+}
+
+.inline-input label {
+    font-size: 18px; /* Larger text for labels */
+    font-weight: bold; /* Bold text for better visibility */
+    color: #333; /* Darker color for labels */
+    width: 50%; /* Label takes half the row width */
+    text-align: left; /* Align label text to the left */
 }
 
 .inline-input input {
-    width: 150px; /* Set smaller width for inputs */
-    padding: 10px; /* Add padding for better usability */
-    font-size: 16px; /* Match font size with other inputs */
-    color: #333; /* Consistent text color */
-    border: 1px solid #ddd; /* Light border for a clean look */
-    border-radius: 5px; /* Rounded corners */
-    background: #f9f9f9; /* Light background */
+    width: 120px; /* Smaller width for input fields */
+    padding: 8px; /* Padding inside the input box */
+    font-size: 16px; /* Consistent font size with the form */
+    border: 1px solid #ddd; /* Light border for clean look */
+    border-radius: 5px; /* Slightly rounded corners */
+    background: #f9f9f9; /* Light gray background */
+    text-align: center; /* Align text inside the input */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-    transition: border-color 0.2s ease; /* Smooth transition on focus */
-    margin-left: 20px; /* Add spacing between label and input */
+    transition: border-color 0.3s ease; /* Smooth focus effect */
+}
+
+.inline-input input:focus {
+    border-color: #007aff; /* Blue border on focus */
+    background: #ffffff; /* White background on focus */
+    outline: none; /* Remove default focus outline */
 }
 
 /* Add focus effect for inline inputs */
@@ -94,12 +108,11 @@ label:not([for]) {
 
 /* Styling for questions to align with inline inputs */
 label.question {
-    font-size: 18px; /* Slightly larger for questions */
+    margin-top: 25px; /* Add more space above each question */
+    margin-bottom: 10px; /* Space below the question text */
+    font-size: 18px; /* Larger font for better visibility */
     font-weight: bold; /* Bold text for emphasis */
-    color: #333; /* Consistent dark color */
-    margin-bottom: 5px; /* Spacing below the label */
-    display: inline-block; /* Keep inline alignment with input */
-    width: calc(100% - 170px); /* Adjust width to align with inputs */
+    color: #333; /* Darker color for clarity */
 }
 
 /* Input focus effect */
