@@ -46,172 +46,70 @@ header p {
     color: #666;
 }
 
-/* Form-Step Styling */
+/* Form-step Styling */
 .form-step {
     display: none;
-    margin: 0 auto;
-    width: 100%;
 }
 
 .form-step.active {
     display: block;
 }
 
-/* Question Labels */
-label:not([for]) {
+/* General Label Styling */
+label {
     font-size: 18px;
-    font-weight: bold;
+    font-weight: normal; /* Default weight for general labels */
     color: #333;
-    margin-top: 20px;
     margin-bottom: 10px;
     display: block;
 }
 
-/* Inline Input Wrapper */
+/* Question Label Styling */
+label.question {
+    font-size: 18px;
+    font-weight: bold; /* Bold for question labels only */
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Inline Input Styling for Age, Height, Weight */
 .inline-input {
     display: flex;
-    gap: 10px; /* Add space between label and input */
-    align-items: center; /* Align vertically */
+    align-items: center; /* Vertically align items */
     margin-bottom: 15px;
+    gap: 10px; /* Add spacing between label and input */
 }
 
-/* Inline Input Labels */
 .inline-input label {
-    font-size: 18px; /* Match question font size */
-    font-weight: bold; /* Consistent with questions */
-    color: #333; /* Same color as other questions */
-    text-align: left; /* Align text to the left */
-    background: none; /* No background */
-    border: none; /* No border */
-    padding: 0; /* Remove padding */
-    width: auto; /* Adjust to the text's width */
+    font-size: 18px;
+    font-weight: bold; /* Ensure only questions are bold */
+    color: #333;
+    margin: 0;
+    text-align: left;
 }
 
-/* Inline Input Fields */
+/* Input Boxes */
 .inline-input input {
-    width: 100px; /* Compact size for alignment */
-    padding: 5px; /* Compact padding */
-    font-size: 14px; /* Match input font size */
-    border: 1px solid #ddd; /* Light border for clean design */
-    border-radius: 5px; /* Rounded corners */
-    background: #f9f9f9; /* Light input background */
-    text-align: center; /* Align text in the center */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    width: 100px; /* Compact box size */
+    height: 40px; /* Align height with labels */
+    padding: 5px;
+    font-size: 14px; /* Match other inputs */
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    text-align: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
     transition: border-color 0.3s ease;
-}
-
-/* Inline Input Styling */
-.inline-input {
-    display: flex; /* Align items horizontally */
-    align-items: center; /* Center label and input vertically */
-    gap: 10px; /* Space between label and input */
-    margin-bottom: 15px; /* Space between rows */
-}
-
-/* Label for Age, Height, and Weight */
-.inline-input label {
-    font-size: 18px; /* Match other question font size */
-    font-weight: bold; /* Make the labels bold */
-    color: #333; /* Same dark color as other questions */
-    text-align: left; /* Align text to the left */
-    background: none; /* Remove any background styling */
-    border: none; /* Remove borders */
-    width: auto; /* Let the width adjust naturally */
-    padding: 0; /* Remove padding for clean look */
-}
-
-/* Input Box Styling for Age, Height, and Weight */
-.inline-input input {
-    width: 120px; /* Compact width for inputs */
-    padding: 8px; /* Slight padding inside input */
-    font-size: 14px; /* Match form font size */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    background: #f9f9f9; /* Subtle background */
-    text-align: center; /* Center the text */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
-    transition: border-color 0.3s ease; /* Smooth transition on focus */
-}
-
-/* Focus Effect for Input Boxes */
-.inline-input input:focus {
-    border-color: #007aff; /* Highlight border on focus */
-    background: #ffffff; /* White background when focused */
-    outline: none; /* Remove default browser outline */
 }
 
 /* Input Focus Effect */
 .inline-input input:focus {
-    border-color: #007aff;
-    background: #ffffff; /* Bright background */
-    outline: none; /* Remove default outline */
-}
-
-/* General Input Focus Effect */
-input[type="text"]:focus,
-input[type="number"]:focus {
-    border-color: #007aff;
+    border-color: #007aff; /* Blue border on focus */
     background: #ffffff;
     outline: none;
 }
 
-/* Question Text Styling */
-label.question {
-    font-size: 18px;
-    font-weight: bold;
-    color: #333;
-    margin-top: 20px;
-    margin-bottom: 10px;
-    display: block;
-}
-
-/* Option Group Labels */
-.option-group label {
-    font-size: 16px;
-    color: #555;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #f9f9f9;
-    cursor: pointer;
-    transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-.option-group label:hover {
-    background: #f0f8ff;
-    border-color: #007aff;
-}
-
-/* Selected Option Styling */
-.option-group input {
-    display: none; /* Hide radio/checkbox inputs */
-}
-
-.option-group input:checked + label {
-    background: #007aff;
-    color: white;
-    border-color: #007aff;
-}
-
-/* Option Labels */
-label[for] {
-    font-size: 16px; /* Slightly smaller text for options */
-    font-weight: normal; /* Regular weight */
-    color: #555; /* Subtle color for options */
-    padding: 8px; /* Add padding for better look */
-    border: 1px solid #ddd; /* Optional border for button-like appearance */
-    border-radius: 5px;
-    background: #f9f9f9; /* Light background for options */
-    cursor: pointer; /* Pointer cursor for clickable options */
-    transition: background 0.3s ease, border-color 0.3s ease;
-}
-
-/* Hover Effect for Option Labels */
-label[for]:hover {
-    background: #f0f8ff; /* Light blue hover effect */
-    border-color: #007aff; /* Apple-style blue border */
-}
-
+/* General Input Styling */
 input, textarea {
     width: 100%;
     padding: 12px;
@@ -224,10 +122,9 @@ input, textarea {
     transition: border-color 0.2s ease-in-out;
 }
 
-input:focus, .inline-input input:focus {
-    border-color: #007aff; /* Apple-style blue border */
-    background: #ffffff; /* White background */
-    outline: none; /* Remove default outline */
+input:focus, textarea:focus {
+    border-color: #007aff;
+    outline: none;
 }
 
 textarea {
@@ -235,15 +132,7 @@ textarea {
     height: 100px;
 }
 
-/* Add focus effect for inputs */
-input[type="number"]:focus,
-input[type="text"]:focus {
-    border-color: #007aff; /* Apple-style blue border */
-    outline: none; /* Remove default outline */
-    background: #ffffff; /* Brighten background on focus */
-}
-
-/* Option group styling */
+/* Option Group Styling */
 .option-group {
     display: flex;
     flex-direction: column;
@@ -275,6 +164,7 @@ input[type="text"]:focus {
     border-color: #007aff;
 }
 
+/* Progress Styling */
 .progress {
     background: #007aff;
     height: 100%;
@@ -282,13 +172,13 @@ input[type="text"]:focus {
     transition: width 0.3s ease;
 }
 
-/* Button styling */
+/* Button Styling */
 .buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
     gap: 10px;
-    margin-bottom: 20px; /* Ensure space below buttons */
+    margin-bottom: 20px;
 }
 
 .button {
@@ -319,13 +209,13 @@ button:disabled {
     width: 100%;
     background: #e0e0e0;
     border-radius: 5px;
-    margin-top: 20px; /* Add space above the progress bar */
+    margin-top: 20px;
     height: 10px;
     overflow: hidden;
     position: relative;
 }
 
-/* Herstart knop */
+/* Restart Button */
 .restart-button {
     background: #ff3b30;
 }
