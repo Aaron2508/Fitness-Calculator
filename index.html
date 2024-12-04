@@ -22,14 +22,16 @@
                 <div class="form-step active" id="step1">
     <h2>Step 1: Personal Information</h2>
 
-   <label class="question">What is your gender?</label>
-<div class="option-group">
-    <label>
-        <input type="radio" name="gender" value="man"> Man
-    </label>
-    <label>
-        <input type="radio" name="gender" value="woman"> Woman
-    </label>
+   <div>
+    <label class="question">What is your gender?</label>
+    <div class="option-group">
+        <label>
+            <input type="radio" name="gender" value="man"> Man
+        </label>
+        <label>
+            <input type="radio" name="gender" value="woman"> Woman
+        </label>
+    </div>
 </div>
 
 <div class="inline-input">
@@ -38,25 +40,27 @@
 </div>
 
 <div class="inline-input">
-    <label for="height">Height (cm):</label>
-    <input type="number" id="height" name="height" placeholder="Enter your height" required>
+    <label class="question">Height (cm):</label>
+    <input type="number" name="height" placeholder="Enter your height">
 </div>
 
 <div class="inline-input">
-    <label for="weight">Weight (kg):</label>
-    <input type="number" id="weight" name="weight" placeholder="Enter your weight" required>
+    <label class="question">Weight (kg):</label>
+    <input type="number" name="weight" placeholder="Enter your weight">
 </div>
 
-    <label>What is your current fitness level?</label>
+<div>
+    <label class="question">What is your current fitness level?</label>
     <div class="option-group">
-        <input type="radio" id="fitness-beginner" name="fitnessLevel" value="beginner" required>
-        <label for="fitness-beginner">Beginner (little to no experience with fitness)</label>
-
-        <input type="radio" id="fitness-intermediate" name="fitnessLevel" value="intermediate" required>
-        <label for="fitness-intermediate">Intermediate (some experience, but not consistent)</label>
-
-        <input type="radio" id="fitness-advanced" name="fitnessLevel" value="advanced" required>
-        <label for="fitness-advanced">Advanced (regular training, consistent routines)</label>
+        <label>
+            <input type="radio" name="fitness-level" value="beginner"> Beginner (little to no experience with fitness)
+        </label>
+        <label>
+            <input type="radio" name="fitness-level" value="intermediate"> Intermediate (some experience, but not consistent)
+        </label>
+        <label>
+            <input type="radio" name="fitness-level" value="advanced"> Advanced (regular training, consistent routines)
+        </label>
     </div>
 </div>
                 <!-- Step 2: Food Preferences -->
