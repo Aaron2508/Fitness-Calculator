@@ -70,35 +70,35 @@ label:not([for]) {
 /* Inline input styling */
 .inline-input {
     display: flex; /* Align items horizontally */
-    align-items: center; /* Center-align the input vertically with the label */
-    gap: 10px; /* Add spacing between label and input */
+    justify-content: space-between; /* Space between label and input */
+    align-items: center; /* Align label and input vertically */
     margin-bottom: 15px; /* Add space below each row */
 }
 
 .inline-input label {
-    font-size: 18px; /* Match the font size of other questions */
-    font-weight: bold; /* Bold font for consistency */
+    font-size: 18px; /* Match font size of other questions */
+    font-weight: bold; /* Consistent bold font */
     color: #333; /* Same color as other questions */
-    margin: 0; /* Remove any extra margin */
-    text-align: left; /* Align the label text to the left */
+    margin: 0; /* Remove unnecessary margins */
+    width: auto; /* Adjust width dynamically */
+    text-align: left; /* Align text to the left */
 }
 
 .inline-input input {
-    width: 150px; /* Set a reasonable width for the input fields */
-    padding: 8px; /* Padding inside the input */
-    font-size: 16px; /* Match the font size of the form */
-    border: 1px solid #ddd; /* Light border for clean design */
-    border-radius: 5px; /* Rounded corners */
-    background: #f9f9f9; /* Light gray background */
-    text-align: center; /* Align the input text to the center */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-    transition: border-color 0.3s ease; /* Smooth border change on focus */
+    width: 120px; /* Smaller width for the input field */
+    padding: 8px; /* Add padding for usability */
+    font-size: 16px; /* Match font size with other inputs */
+    border: 1px solid #ddd; /* Add border for visibility */
+    border-radius: 5px; /* Slightly rounded corners */
+    background: #f9f9f9; /* Subtle background color */
+    text-align: left; /* Align text to the left */
+    transition: border-color 0.3s ease; /* Smooth border transition */
 }
 
 .inline-input input:focus {
-    border-color: #007aff; /* Highlight border with Apple-style blue on focus */
-    background: #ffffff; /* Brighten the background on focus */
-    outline: none; /* Remove the default outline */
+    border-color: #007aff; /* Highlight border on focus */
+    outline: none; /* Remove default focus outline */
+    background: #ffffff; /* Brighten background on focus */
 }
 
 /* Add focus effect for inline inputs */
