@@ -1,11 +1,11 @@
-/* General Reset */
+/* Algemene reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Body Styling */
+/* Algemene body styling */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Arial, sans-serif;
     background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
@@ -17,7 +17,7 @@ body {
     padding: 20px;
 }
 
-/* Container Styling */
+/* Container styling */
 .container {
     max-width: 600px;
     width: 100%;
@@ -28,7 +28,7 @@ body {
     overflow: hidden;
 }
 
-/* Header Styling */
+/* Header styling */
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -46,7 +46,7 @@ header p {
     color: #666;
 }
 
-/* Form-step Styling */
+/* Form-step styling */
 .form-step {
     display: none;
 }
@@ -55,61 +55,14 @@ header p {
     display: block;
 }
 
-/* General Label Styling */
+/* Label styling */
 label {
-    font-size: 18px;
-    font-weight: normal; /* Default weight for general labels */
+    font-size: 14px;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     display: block;
 }
 
-/* Question Label Styling */
-label.question {
-    font-size: 18px;
-    font-weight: bold; /* Bold for question labels only */
-    color: #333;
-    margin-bottom: 5px;
-}
-
-/* Inline Input Styling for Age, Height, Weight */
-.inline-input {
-    display: flex;
-    align-items: center; /* Vertically align items */
-    margin-bottom: 15px;
-    gap: 10px; /* Add spacing between label and input */
-}
-
-.inline-input label {
-    font-size: 18px;
-    font-weight: bold; /* Ensure only questions are bold */
-    color: #333;
-    margin: 0;
-    text-align: left;
-}
-
-/* Input Boxes */
-.inline-input input {
-    width: 100px; /* Compact box size */
-    height: 40px; /* Align height with labels */
-    padding: 5px;
-    font-size: 14px; /* Match other inputs */
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #f9f9f9;
-    text-align: center;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: border-color 0.3s ease;
-}
-
-/* Input Focus Effect */
-.inline-input input:focus {
-    border-color: #007aff; /* Blue border on focus */
-    background: #ffffff;
-    outline: none;
-}
-
-/* General Input Styling */
 input, textarea {
     width: 100%;
     padding: 12px;
@@ -132,7 +85,7 @@ textarea {
     height: 100px;
 }
 
-/* Option Group Styling */
+/* Option group styling */
 .option-group {
     display: flex;
     flex-direction: column;
@@ -164,7 +117,6 @@ textarea {
     border-color: #007aff;
 }
 
-/* Progress Styling */
 .progress {
     background: #007aff;
     height: 100%;
@@ -172,13 +124,13 @@ textarea {
     transition: width 0.3s ease;
 }
 
-/* Button Styling */
+/* Button styling */
 .buttons {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Ensure space below buttons */
 }
 
 .button {
@@ -209,13 +161,13 @@ button:disabled {
     width: 100%;
     background: #e0e0e0;
     border-radius: 5px;
-    margin-top: 20px;
+    margin-top: 20px; /* Add space above the progress bar */
     height: 10px;
     overflow: hidden;
     position: relative;
 }
 
-/* Restart Button */
+/* Herstart knop */
 .restart-button {
     background: #ff3b30;
 }
