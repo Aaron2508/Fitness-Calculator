@@ -55,13 +55,81 @@ header p {
     display: block;
 }
 
-/* Label styling for questions */
-label {
+/* Style for question labels */
+label:not([for]) {
     font-size: 18px;
     font-weight: bold;
-    color: #007aff; /* Apple-style blue color */
+    color: #333;
+    margin-top: 20px;
     margin-bottom: 10px;
     display: block;
+}
+
+/* Style for text and number inputs */
+input[type="text"],
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-top: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: border-color 0.2s ease;
+}
+
+/* Input focus effect */
+input[type="text"]:focus,
+input[type="number"]:focus {
+    border-color: #007aff;
+    outline: none;
+    background: #fff;
+}
+
+/* Style for option-group labels */
+.option-group label {
+    font-size: 16px;
+    font-weight: normal;
+    color: #555;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background: #f9f9f9;
+    cursor: pointer;
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+.option-group label:hover {
+    background: #f0f8ff;
+    border-color: #007aff;
+}
+
+/* Add space specifically for input labels */
+input[type="number"] + label {
+    margin-bottom: 10px;
+    font-size: 16px;
+    font-weight: normal;
+}
+
+/* Option Labels */
+label[for] {
+    font-size: 16px; /* Slightly smaller text for options */
+    font-weight: normal; /* Regular weight */
+    color: #555; /* Subtle color for options */
+    padding: 8px; /* Add padding for better look */
+    border: 1px solid #ddd; /* Optional border for button-like appearance */
+    border-radius: 5px;
+    background: #f9f9f9; /* Light background for options */
+    cursor: pointer; /* Pointer cursor for clickable options */
+    transition: background 0.3s ease, border-color 0.3s ease;
+}
+
+/* Hover Effect for Option Labels */
+label[for]:hover {
+    background: #f0f8ff; /* Light blue hover effect */
+    border-color: #007aff; /* Apple-style blue border */
 }
 
 input, textarea {
@@ -84,6 +152,14 @@ input:focus, textarea:focus {
 textarea {
     resize: none;
     height: 100px;
+}
+
+/* Add focus effect for inputs */
+input[type="number"]:focus,
+input[type="text"]:focus {
+    border-color: #007aff; /* Apple-style blue border */
+    outline: none; /* Remove default outline */
+    background: #ffffff; /* Brighten background on focus */
 }
 
 /* Option group styling */
