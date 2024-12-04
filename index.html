@@ -346,5 +346,41 @@
     </div>
 
     <script src="script.js"></script>
+    <script>
+    // Function to calculate calories
+    function calculateCalories() {
+        const weight = document.getElementById("weight").value;
+        const height = document.getElementById("height").value;
+        const age = document.getElementById("age").value;
+
+        const activityLevel = document.querySelector('input[name="activityLevel"]:checked');
+        
+        // Only proceed if all inputs are filled
+        if (weight && height && age && activityLevel) {
+            const activityMultiplier = {
+                low: 1.2,
+                moderate: 1.55,
+                high: 1.75,
+            };
+
+            // Calculate BMR (Basal Metabolic Rate) using Mifflin-St Jeor Equation
+            const bmr = 10 * weight + 6.25 * height - 5 * age + 5;
+
+            // Multiply BMR by activity level
+            const calories = Math.round(bmr * activityMultiplier[activityLevel.value]);
+
+            // Display the calorie calculation
+            document.getElementById("calorieOutput").textContent = `Estimated Daily Calories: ${calories} kcal`;
+        } else {
+            // Clear the output if inputs are incomplete
+            document.getElementById("calorieOutput").textContent = '';
+        }
+    }
+
+    // Add event listeners to inputs
+    document.querySelectorAll("#weight, #height, #age, input[name='activityLevel']").forEach((input) => {
+        input.addEventListener("input", calculateCalories);
+    });
+</script>
 </body>
 </html>
