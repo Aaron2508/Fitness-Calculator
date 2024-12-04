@@ -92,6 +92,15 @@ textarea {
     gap: 10px;
 }
 
+/* Calorie Output Styling */
+#calorieOutput {
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #007aff; /* Match the theme color */
+    text-align: left;
+}
+
 .option-group label {
     font-size: 14px;
     padding: 10px;
