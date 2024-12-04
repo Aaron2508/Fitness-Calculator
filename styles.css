@@ -1,11 +1,11 @@
-/* Algemene reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Algemene body styling */
+/* Body Styling */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "San Francisco", Arial, sans-serif;
     background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
@@ -17,7 +17,7 @@ body {
     padding: 20px;
 }
 
-/* Container styling */
+/* Container Styling */
 .container {
     max-width: 600px;
     width: 100%;
@@ -28,7 +28,7 @@ body {
     overflow: hidden;
 }
 
-/* Header styling */
+/* Header Styling */
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -46,18 +46,18 @@ header p {
     color: #666;
 }
 
-/* Form-step styling */
-..form-step {
-    display: block;
-    margin: 0 auto; /* Center align */
-    width: 100%; /* Keep the form width consistent */
+/* Form-Step Styling */
+.form-step {
+    display: none;
+    margin: 0 auto;
+    width: 100%;
 }
 
 .form-step.active {
     display: block;
 }
 
-/* Style for question labels */
+/* Question Labels */
 label:not([for]) {
     font-size: 18px;
     font-weight: bold;
@@ -67,102 +67,67 @@ label:not([for]) {
     display: block;
 }
 
-/* Inline input styling */
+/* Inline Input Wrapper */
 .inline-input {
-    display: flex; /* Align items horizontally */
-    justify-content: space-between; /* Space between label and input */
-    align-items: center; /* Align label and input vertically */
-    margin-bottom: 15px; /* Add space below each row */
+    display: flex;
+    gap: 10px; /* Add space between label and input */
+    align-items: center; /* Align vertically */
+    margin-bottom: 15px;
 }
 
+/* Inline Input Labels */
 .inline-input label {
-    font-size: 18px; /* Match font size with other questions */
-    font-weight: bold; /* Consistent bold styling */
-    color: #333; /* Consistent text color */
-    margin-bottom: 5px; /* Spacing between label and input */
-    display: block; /* Labels stack vertically above inputs */
+    font-size: 18px; /* Match question font size */
+    font-weight: bold; /* Consistent with questions */
+    color: #333; /* Same color as other questions */
+    text-align: left; /* Align text to the left */
     background: none; /* No background */
     border: none; /* No border */
-}
-
-.inline-input input {
-    width: 150px; /* Compact width for the input */
-    padding: 8px; /* Add light padding for usability */
-    font-size: 14px; /* Keep consistent font size */
-    border: 1px solid #ddd; /* Light border */
-    border-radius: 5px; /* Rounded corners */
-    text-align: left; /* Align text inside input */
-    margin-top: 5px; /* Space between label and input */
-}
-
-.inline-input input:focus {
-    border-color: #007aff; /* Highlight border on focus */
-    outline: none; /* Remove default focus outline */
-    background: #ffffff; /* Brighten background on focus */
-}
-
-/* Add focus effect for inline inputs */
-.inline-input input:focus {
-    border-color: #007aff; /* Apple-style blue border */
-    outline: none; /* Remove default outline */
-    background: #ffffff; /* Brighten background on focus */
-}
-
-/* Styling for questions to align with inline inputs */
-label.question {
-    margin-top: 25px; /* Add more space above each question */
-    margin-bottom: 10px; /* Space below the question text */
-    font-size: 18px; /* Larger font for better visibility */
-    font-weight: bold; /* Bold text for emphasis */
-    color: #333; /* Darker color for clarity */
-}
-
-/* Label style for Age, Height, and Weight (no box) */
-.inline-input label {
-    font-size: 18px; /* Match other question text size */
-    font-weight: bold; /* Bold text like other questions */
-    color: #333; /* Consistent color */
-    margin: 0; /* Remove margin */
-    text-align: left; /* Align text to the left */
-    display: inline-block; /* Ensure inline alignment with the input */
-    width: auto; /* Adjust naturally based on text length */
     padding: 0; /* Remove padding */
-    background: none; /* Remove background */
-    border: none; /* Remove border */
+    width: auto; /* Adjust to the text's width */
 }
 
-/* Styling for the input boxes */
+/* Inline Input Fields */
 .inline-input input {
-    width: 100px; /* Small width for compact design */
-    padding: 5px; /* Smaller padding for less height */
-    font-size: 14px; /* Slightly smaller font size */
-    border: 1px solid #ddd; /* Light border */
+    width: 100px; /* Compact size for alignment */
+    padding: 5px; /* Compact padding */
+    font-size: 14px; /* Match input font size */
+    border: 1px solid #ddd; /* Light border for clean design */
     border-radius: 5px; /* Rounded corners */
-    background: #f9f9f9; /* Light background */
-    text-align: center; /* Center text inside */
+    background: #f9f9f9; /* Light input background */
+    text-align: center; /* Align text in the center */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-    transition: border-color 0.3s ease; /* Smooth transition on focus */
+    transition: border-color 0.3s ease;
 }
 
-/* Focus effect for input boxes */
+/* Input Focus Effect */
 .inline-input input:focus {
-    border-color: #007aff; /* Apple-style blue border */
+    border-color: #007aff;
     background: #ffffff; /* Bright background */
     outline: none; /* Remove default outline */
 }
 
-/* Input focus effect */
+/* General Input Focus Effect */
 input[type="text"]:focus,
 input[type="number"]:focus {
     border-color: #007aff;
+    background: #ffffff;
     outline: none;
-    background: #fff;
 }
 
-/* Style for option-group labels */
+/* Question Text Styling */
+label.question {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    display: block;
+}
+
+/* Option Group Labels */
 .option-group label {
     font-size: 16px;
-    font-weight: normal;
     color: #555;
     padding: 10px;
     border: 1px solid #ddd;
@@ -177,11 +142,15 @@ input[type="number"]:focus {
     border-color: #007aff;
 }
 
-/* Add space specifically for input labels */
-input[type="number"] + label {
-    margin-bottom: 10px;
-    font-size: 16px;
-    font-weight: normal;
+/* Selected Option Styling */
+.option-group input {
+    display: none; /* Hide radio/checkbox inputs */
+}
+
+.option-group input:checked + label {
+    background: #007aff;
+    color: white;
+    border-color: #007aff;
 }
 
 /* Option Labels */
