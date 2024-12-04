@@ -65,19 +65,41 @@ label:not([for]) {
     display: block;
 }
 
-/* Style for text and number inputs */
-input[type="text"],
-input[type="number"] {
-    width: 100%;
-    padding: 12px;
-    margin-top: 5px;
-    margin-bottom: 20px;
-    font-size: 16px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #f9f9f9;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-    transition: border-color 0.2s ease;
+/* Inline input styling */
+.inline-input {
+    display: flex; /* Enable horizontal layout */
+    justify-content: flex-end; /* Align input to the right */
+    margin-bottom: 20px; /* Add spacing below the row */
+}
+
+.inline-input input {
+    width: 150px; /* Set smaller width for inputs */
+    padding: 10px; /* Add padding for better usability */
+    font-size: 16px; /* Match font size with other inputs */
+    color: #333; /* Consistent text color */
+    border: 1px solid #ddd; /* Light border for a clean look */
+    border-radius: 5px; /* Rounded corners */
+    background: #f9f9f9; /* Light background */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: border-color 0.2s ease; /* Smooth transition on focus */
+    margin-left: 20px; /* Add spacing between label and input */
+}
+
+/* Add focus effect for inline inputs */
+.inline-input input:focus {
+    border-color: #007aff; /* Apple-style blue border */
+    outline: none; /* Remove default outline */
+    background: #ffffff; /* Brighten background on focus */
+}
+
+/* Styling for questions to align with inline inputs */
+label.question {
+    font-size: 18px; /* Slightly larger for questions */
+    font-weight: bold; /* Bold text for emphasis */
+    color: #333; /* Consistent dark color */
+    margin-bottom: 5px; /* Spacing below the label */
+    display: inline-block; /* Keep inline alignment with input */
+    width: calc(100% - 170px); /* Adjust width to align with inputs */
 }
 
 /* Input focus effect */
