@@ -117,6 +117,36 @@ label.question {
     color: #333; /* Darker color for clarity */
 }
 
+/* Styling for Age, Height, and Weight labels (like other questions) */
+.inline-input label {
+    font-size: 18px; /* Match the font size of other questions */
+    font-weight: bold; /* Bold font like other questions */
+    color: #333; /* Same dark color */
+    margin: 0; /* Remove extra margin */
+    text-align: left; /* Align the text to the left */
+    width: auto; /* No fixed width, adjust naturally */
+}
+
+/* Styling for the input boxes */
+.inline-input input {
+    width: 100px; /* Small width for compact design */
+    padding: 5px; /* Smaller padding for less height */
+    font-size: 14px; /* Slightly smaller font size */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    background: #f9f9f9; /* Light background */
+    text-align: center; /* Center text inside */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+    transition: border-color 0.3s ease; /* Smooth transition on focus */
+}
+
+/* Focus effect for input boxes */
+.inline-input input:focus {
+    border-color: #007aff; /* Apple-style blue border */
+    background: #ffffff; /* Bright background */
+    outline: none; /* Remove default outline */
+}
+
 /* Input focus effect */
 input[type="text"]:focus,
 input[type="number"]:focus {
