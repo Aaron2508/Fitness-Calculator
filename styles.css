@@ -76,25 +76,23 @@ label:not([for]) {
 }
 
 .inline-input label {
-    font-size: 18px; /* Match font size of other questions */
-    font-weight: bold; /* Consistent bold font */
-    color: #333; /* Same color as other questions */
-    margin: 0; /* Remove unnecessary margins */
-    width: auto; /* Adjust width dynamically */
-    text-align: left; /* Align text to the left */
+    font-size: 18px; /* Match font size with other questions */
+    font-weight: bold; /* Consistent bold styling */
+    color: #333; /* Consistent text color */
+    margin-bottom: 5px; /* Spacing between label and input */
+    display: block; /* Labels stack vertically above inputs */
+    background: none; /* No background */
+    border: none; /* No border */
 }
 
 .inline-input input {
-    width: 120px; /* Adjust width for better alignment */
-    padding: 6px; /* Smaller padding */
-    font-size: 14px; /* Match other inputs */
-    border: 1px solid #ddd; /* Add light border */
+    width: 150px; /* Compact width for the input */
+    padding: 8px; /* Add light padding for usability */
+    font-size: 14px; /* Keep consistent font size */
+    border: 1px solid #ddd; /* Light border */
     border-radius: 5px; /* Rounded corners */
-    background: #f9f9f9; /* Light background */
-    text-align: center; /* Align text to the center */
-    margin-left: 10px; /* Add space between label and input */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-    transition: border-color 0.3s ease; /* Smooth focus effect */
+    text-align: left; /* Align text inside input */
+    margin-top: 5px; /* Space between label and input */
 }
 
 .inline-input input:focus {
@@ -217,9 +215,10 @@ input, textarea {
     transition: border-color 0.2s ease-in-out;
 }
 
-input:focus, textarea:focus {
-    border-color: #007aff;
-    outline: none;
+input:focus, .inline-input input:focus {
+    border-color: #007aff; /* Apple-style blue border */
+    background: #ffffff; /* White background */
+    outline: none; /* Remove default outline */
 }
 
 textarea {
