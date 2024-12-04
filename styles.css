@@ -100,6 +100,46 @@ label:not([for]) {
     transition: border-color 0.3s ease;
 }
 
+/* Inline Input Styling */
+.inline-input {
+    display: flex; /* Align items horizontally */
+    align-items: center; /* Center label and input vertically */
+    gap: 10px; /* Space between label and input */
+    margin-bottom: 15px; /* Space between rows */
+}
+
+/* Label for Age, Height, and Weight */
+.inline-input label {
+    font-size: 18px; /* Match other question font size */
+    font-weight: bold; /* Make the labels bold */
+    color: #333; /* Same dark color as other questions */
+    text-align: left; /* Align text to the left */
+    background: none; /* Remove any background styling */
+    border: none; /* Remove borders */
+    width: auto; /* Let the width adjust naturally */
+    padding: 0; /* Remove padding for clean look */
+}
+
+/* Input Box Styling for Age, Height, and Weight */
+.inline-input input {
+    width: 120px; /* Compact width for inputs */
+    padding: 8px; /* Slight padding inside input */
+    font-size: 14px; /* Match form font size */
+    border: 1px solid #ddd; /* Light border */
+    border-radius: 5px; /* Rounded corners */
+    background: #f9f9f9; /* Subtle background */
+    text-align: center; /* Center the text */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow for depth */
+    transition: border-color 0.3s ease; /* Smooth transition on focus */
+}
+
+/* Focus Effect for Input Boxes */
+.inline-input input:focus {
+    border-color: #007aff; /* Highlight border on focus */
+    background: #ffffff; /* White background when focused */
+    outline: none; /* Remove default browser outline */
+}
+
 /* Input Focus Effect */
 .inline-input input:focus {
     border-color: #007aff;
