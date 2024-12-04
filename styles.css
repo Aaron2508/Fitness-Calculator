@@ -55,11 +55,12 @@ header p {
     display: block;
 }
 
-/* Label styling */
+/* Label styling for questions */
 label {
-    font-size: 14px;
-    color: #333;
-    margin-bottom: 5px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #007aff; /* Apple-style blue color */
+    margin-bottom: 10px;
     display: block;
 }
 
